@@ -27,7 +27,7 @@ const UserLogin = ({ show, setShow }) => {
 
   try {
     const res = await axios.post(
-      "http://localhost:5000/api/users/login",
+      "https://medicare-backend-delta.vercel.app/api/users/login",
       data
     );
 

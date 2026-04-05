@@ -25,7 +25,7 @@ const Patients = () => {
   const handleSave = async (updatedPatient) => {
     try {
       await axios.put(
-        "http://localhost:5000/api/doctors/update-patient",
+        "https://medicare-backend-delta.vercel.app/api/doctors/update-patient",
         {
           doctorId: user._id,          // 🔥 logged doctor
           patientId: updatedPatient._id,
@@ -49,7 +49,7 @@ const Patients = () => {
   const fetchPatients = async () => {
     try {
       const res = await axios.get(
-        `http://localhost:5000/api/doctors/patients/${user._id}`
+        `https://medicare-backend-delta.vercel.app/api/doctors/patients/${user._id}`
       );
 
       setPatients(res.data.patients);

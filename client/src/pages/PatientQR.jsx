@@ -19,7 +19,7 @@ const PatientQR = () => {
   const fetchPatient = async () => {
     try {
       const res = await axios.get(
-        `http://localhost:5000/api/users/${id}`
+        `https://medicare-backend-delta.vercel.app/api/users/${id}`
       );
       setPatient(res.data.user);
     } catch (error) {

@@ -12,7 +12,7 @@ const Dashboard = () => {
   const fetchStats = async () => {
     try {
       const res = await axios.get(
-        `http://localhost:5000/api/doctors/patients/${user._id}`
+        `https://medicare-backend-delta.vercel.app/api/doctors/patients/${user._id}`
       );
 
       setStats({

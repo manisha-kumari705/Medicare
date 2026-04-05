@@ -118,7 +118,7 @@ const RegisterPage = () => {
 
     try {
       const res = await axios.post(
-        "http://localhost:5000/api/users/register",
+        "https://medicare-backend-delta.vercel.app/api/users/register",
         formData
       );
 

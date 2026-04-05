@@ -21,7 +21,7 @@ const Patients = () => {
 
     try {
       await axios.delete(
-        `http://localhost:5000/api/users/delete/${id}`
+        `https://medicare-backend-delta.vercel.app/api/users/delete/${id}`
       );
 
       toast.success("Patient removed successfully 🗑️");
@@ -41,7 +41,7 @@ const Patients = () => {
   const handleSave = async (updatedPatient) => {
     try {
       const res = await axios.put(
-        `http://localhost:5000/api/users/update-medical/${updatedPatient._id}`,
+        `https://medicare-backend-delta.vercel.app/api/users/update-medical/${updatedPatient._id}`,
         {
           bloodGroup: updatedPatient.bloodGroup,
           allergies: updatedPatient.allergies,
@@ -61,7 +61,7 @@ const Patients = () => {
   const fetchPatients = async () => {
     try {
       const res = await axios.get(
-        "http://localhost:5000/api/users/all"
+        "https://medicare-backend-delta.vercel.app/api/users/all"
       );
 
       setPatients(res.data.users);

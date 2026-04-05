@@ -33,7 +33,7 @@ const Doctors = () => {
   const fetchDoctors = async () => {
     try {
       const res = await axios.get(
-        "http://localhost:5000/api/doctors/all"
+        "https://medicare-backend-delta.vercel.app/api/doctors/all"
       );
 
       setDoctors(res.data.doctors);
@@ -71,7 +71,7 @@ const Doctors = () => {
 
     try {
       await axios.delete(
-        `http://localhost:5000/api/doctors/delete/${id}`
+        `https://medicare-backend-delta.vercel.app/api/doctors/delete/${id}`
       );
 
       toast.success("Doctor removed successfully 🗑️");
@@ -88,7 +88,7 @@ const Doctors = () => {
   const fetchPatients = async () => {
     try {
       const res = await axios.get(
-        "http://localhost:5000/api/users/all"
+        "https://medicare-backend-delta.vercel.app/api/users/all"
       );
 
       setPatients(res.data.users);
@@ -123,7 +123,7 @@ const Doctors = () => {
   const handleAssign = async (patient) => {
     try {
       await axios.post(
-        "http://localhost:5000/api/doctors/assign",
+        "https://medicare-backend-delta.vercel.app/api/doctors/assign",
         {
           doctorId: selectedDoctor._id,
           patientId: patient._id,
@@ -148,7 +148,7 @@ const Doctors = () => {
   const handleRemove = async (patientId) => {
     try {
       await axios.post(
-        "http://localhost:5000/api/doctors/remove-patient",
+        "https://medicare-backend-delta.vercel.app/api/doctors/remove-patient",
         {
           doctorId: selectedDoctor._id,
           patientId,

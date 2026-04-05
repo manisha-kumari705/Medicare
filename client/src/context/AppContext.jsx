@@ -34,7 +34,7 @@ export const AppContextProvider = ({ children }) => {
   // ================= HOSPITAL LOGIN (API BASED) =================
   const loginHospital = async (email, password) => {
     try {
-      const res = await fetch("http://localhost:5000/api/hospital/login", {
+      const res = await fetch("https://medicare-backend-delta.vercel.app/api/hospital/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -70,7 +70,7 @@ export const AppContextProvider = ({ children }) => {
   // ================= Doctor Login =================
   const loginDoctor = async (email, password) => {
     try {
-      const res = await fetch("http://localhost:5000/api/doctors/login", {
+      const res = await fetch("https://medicare-backend-delta.vercel.app/api/doctors/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

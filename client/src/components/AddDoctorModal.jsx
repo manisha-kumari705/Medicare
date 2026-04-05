@@ -63,7 +63,7 @@ const AddDoctorModal = ({ open, onClose, onAdd }) => {
       setLoading(true); // 🔥 START LOADING
 
       const res = await axios.post(
-        "http://localhost:5000/api/doctors/add",
+        "https://medicare-backend-delta.vercel.app/api/doctors/add",
         {
           name: formData.name,
           email: formData.email,
