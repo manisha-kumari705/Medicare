@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import { ShieldPlus, Menu, X, LogIn, LogOut } from "lucide-react";
 import { useAppContext } from "../context/AppContext";
-import UserLogin from "./UserLogin";
+import UserLogin from "./userLogin";
 
 const Navbar = () => {
 
