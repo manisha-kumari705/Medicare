@@ -98,7 +98,7 @@ const MedicalCard = () => {
 
           <div className="inline-block bg-white p-3 rounded-xl shadow">
             <QRCodeCanvas
-              value={`http://localhost:5173/patient/${formData._id}`}
+              value={`https://medicare-iota-flame.vercel.app/patient/${formData._id}`}
               size={110}
             />
           </div>
